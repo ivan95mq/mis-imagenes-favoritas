@@ -2,6 +2,12 @@
 
 Almacen de imagenes.
 
+# Contacto
+
+    Iván Moreno Quirós
+    ivan@solwed.es
+    SOLWED.ES✌️
+
 # Descripción
 
 El proyecto es una prueba tecnica para Añadir, Leer, Modificar y Borrar imagenes de una base de datos.
@@ -14,63 +20,59 @@ He dividido el proyecto en dos partes:
 1º: un servidor, que hace de API y conecta las llamadas del protocolo http en el post a la base de datos en MySQL
 2º: un cliente, para que el usuario pueda ver, editar y borrar todas las imagenes.
 
-Para empezar este proyecto, tendremos que instalar la base de datos.
+## Base de datos
+
+Para empezar este proyecto, tendremos que instalar la base de datos incluida en el proyecto en un servidor MySQL.
+![Alt text](<CleanShot 2023-06-22 at 10.56.14@2x.png>)
+
+## Servidor
+
 Despues tendremos que ejecutar el servidor con node (npm run start). Si hay algun problema borrar la carpeta node_modules y ejecutar (npm install).
+Importante añadir en el servidor de MySQL la siguiente configuración.
+![Configuracion de tamaño de imagenes en servidor mysql](<CleanShot 2023-06-19 at 17.21.23@2x.png>)
+
+## Cliente
+
 Ejecutar la parte del cliente con node (npm run start). Si hay algun problema borrar la carpeta node_modules y ejecutar (npm install).
 
 Despues accedemos al localhost:3000 (puerto 3000) y podremos ver el cliente.
 
 # Uso
 
-Se puede utilizar para la carga de archivos e imagenes en cualquier servidor donde lo instalemos.
+Se puede utilizar para la carga de imagenes en cualquier servidor donde lo instalemos.
 
 # Estructura de archivos
 
 En la parte del cliente tenemos una instalacion de React de tal manera:
-├── node_modules
-├── package-lock.json
-├── package.json
-├── public
-│ ├── favicon.ico
-│ ├── index.html
-│ ├── logo192.png
-│ ├── logo512.png
-│ ├── manifest.json
-│ └── robots.txt
-└── src
-├── App.js
-└── index.js
 
-En la parte del servidor tenemos una instalacion de node con express de la siguiente manera:
-├── node_modules
-├── package-lock.json
-├── package.json
-├── routes
-│ └── routes.js
-└── server.js
+![Alt text](<CleanShot 2023-06-22 at 10.45.33@2x.png>)
 
 # Contenido del proyecto
 
 Podemos ver y analizar los diferentes apartados del proyecto desde la misma pantalla:
 
-# CREATE
+## CREATE
 
 Nos muestra un formulario el cual podemos rellenar para ponerle un titulo y agregar un archivo.
 El programa subira el archivo al servidor y lo guardara en la carpeta images.
 Tambien subira la ruta del archivo y el titulo a la base de datos.
 
-# READ
+## READ
 
-# UPDATE
+La aplicacion nos muestra en tiempo real todas las fotos insertadas en la Base de datos.
 
-# DELETE
+## UPDATE
+
+La edición no se contempla en esta aplicación ya que puedes borrar las imagenes y volver a introducirlas.
+
+## DELETE
+
+Al pulsar en una Imagen se puede ver en grande y pulsar el boton de borrar para borrarla.
 
 ## Tecnologias utilizadas
 
-Licencia: Especifica la licencia bajo la cual se distribuye tu proyecto. Si no estás seguro de qué licencia utilizar, consulta recursos como choosealicense.com para obtener orientación.
+Se ha utilizado una base de datos en MySQL, node.js como gestor de paquetes, un servidor con Express.js (Nodemon para que se autoejecute), React para el cliente con algunas dependencias como: 'react-modal'
 
-Contacto: Proporciona información de contacto para que los usuarios puedan comunicarse contigo si tienen preguntas, problemas o comentarios sobre el proyecto.
+## Estado
 
-Estado del proyecto: Si el proyecto está en desarrollo activo o ya no se mantiene, es útil incluir esta información para que los usuarios sepan qué esperar.
-
-![Configuracion de tamaño de imagenes en servidor mysql](<CleanShot 2023-06-19 at 17.21.23@2x.png>)
+Es un programa de prueba, no se encuentra en desarrollo ni se pretende seguir desarrollandolo.
